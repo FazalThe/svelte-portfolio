@@ -83,7 +83,7 @@
 
 	h1 {
 		color: #ffd900;
-		font-family: "Fascinate", system-ui;
+		font-family: "Audiowide", sans-serif;
 		font-size: clamp(2rem, 4vw, 4rem);
 		line-height: 1.1;
 		font-weight: 700;
@@ -93,9 +93,9 @@
 
 	.blue-text {
 		background-color: #00fddb;
-		font-family: "Alien Block", sans-serif;
+		font-family: "Bungee Inline", sans-serif;
 		font-size: clamp(3.5rem, 7vw, 5.5rem);
-  		font-weight: 400;
+  		font-weight: 800;
   		font-style: normal;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
