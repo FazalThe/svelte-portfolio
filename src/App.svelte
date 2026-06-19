@@ -48,7 +48,7 @@
 	:global(body) {
 		margin: 0;
 		font-family: 'Inter', system-ui, -apple-system, sans-serif;
-		background-color: #3e003c;
+		background-color: #000000;
 		color: #008B8C;
 		overflow-x: hidden;
 		perspective: 1000px; /* Crucial for the 3D rotation effect */
