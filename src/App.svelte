@@ -24,11 +24,14 @@
 	<div class="grid-wrapper">
 		{#if visible}
 			<div class="content-box">
-
-				<h1 in:fly={{ y: 30, duration: 800, delay: 400 }}>
-					Hey there its <span class="blue-text">Fazal</span> here.
-				</h1>
-				
+				<div>
+					<h1 in:fly={{ y: 30, duration: 800, delay: 400 }}>
+						Hey there its 
+					</h1>
+					<h1 in:fly={{ y: 30, duration: 800, delay: 400 }}>
+						<span class="blue-text">Fazal</span> here.
+					</h1>
+				</div>
 				<div class="cta-group" in:fly={{ y: 40, duration: 800, delay: 800 }}>
 					<a href="#work" class="btn btn-primary">View My Work</a>
 					<a href="#contact" class="btn btn-secondary">Let's Talk</a>
@@ -45,7 +48,7 @@
 	:global(body) {
 		margin: 0;
 		font-family: 'Inter', system-ui, -apple-system, sans-serif;
-		background-color: rgb(0, 0, 0)00;
+		background-color: #3e003c;
 		color: #008B8C;
 		overflow-x: hidden;
 		perspective: 1000px; /* Crucial for the 3D rotation effect */
@@ -70,7 +73,7 @@
 
 	/* Content Styling */
 	.content-box {
-		max-width: 40%;
+		max-width: 60%;
 		display: flex;
 		flex-direction: column;
 		justify-items: center;
@@ -81,7 +84,7 @@
 	h1 {
 		color: #ffd900;
 		font-family: "Fascinate", system-ui;
-		font-size: clamp(2.5rem, 5vw, 4.5rem);
+		font-size: clamp(2rem, 4vw, 4rem);
 		line-height: 1.1;
 		font-weight: 700;
 		margin: 0;
@@ -91,6 +94,7 @@
 	.blue-text {
 		background-color: #00fddb;
 		font-family: "Alien Block", sans-serif;
+		font-size: clamp(3.5rem, 7vw, 5.5rem);
   		font-weight: 400;
   		font-style: normal;
 		-webkit-background-clip: text;
