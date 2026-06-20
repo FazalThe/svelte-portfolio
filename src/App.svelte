@@ -29,29 +29,25 @@
 		{#if visible}
 			
 			<div class="content-box">
-				<div>
 					<h1 in:fly={{ y: 30, duration: 800, delay: 400 }}>
 						Hey there its 
 					</h1>
 					<h1 in:fly={{ y: 30, duration: 800, delay: 400 }}>
 						<span class="blue-text">Fazal</span> here.
 					</h1>
-					<svg class="curvy-overlay" viewBox="0 0 200 400" preserveAspectRatio="xMidYMid meet">
-						<path d="M 50 0 C 00 60, 160 120, 80 200 C 30 260, 150 320, 100 400" 
-							fill="none" stroke="#B000AB" stroke-width="30" opacity="l"/>
-					</svg>
 
-				</div>
-				<div class="cta-group" in:fly={{ y: 40, duration: 800, delay: 800 }}>
-					<a href="#work" class="btn btn-primary">View My Work</a>
-					<a href="#contact" class="btn btn-secondary">Let's Talk</a>
-				</div>
 			</div>
-		{/if}
 
+		{/if}
 
 	</div>
 </section>
+
+<svg class="curvy-overlay" viewBox="0 0 200 400" preserveAspectRatio="xMidYMid meet">
+	<path class="stroke" d="M 50 0 C 00 60, 160 120, 90 200 C 30 260, 150 320, 100 400" 
+		fill="none" opacity="l" stroke-linecap="round"/>
+</svg>
+
 
 
 
@@ -80,6 +76,7 @@
 	.grid-wrapper {
 		max-width: 1200px;
 		width: 100%;
+		height: 100%;
 		display: flex;
 		justify-content: center;
 	}
@@ -105,7 +102,7 @@
 	}
 
 	.blue-text {
-		background-color: #00f8d7;
+		background-color: #00cfb4;
 		font-family: "Alien Block", sans-serif;
 		font-size: clamp(3.5rem, 7vw, 7rem);
   		font-weight: 400;
@@ -131,36 +128,22 @@
 		transition: all 0.3s ease;
 	}
 
-	.btn-primary {
-		background-color: #ffffff;
-		color: #0b0b0f;
-	}
-
-	.btn-primary:hover {
-		background-color: #e2e2e5;
-		transform: translateY(-2px);
-	}
-
-	.btn-secondary {
-		border: 1px solid rgba(255, 255, 255, 0.15);
-		color: #ffffff;
-	}
-
-	.btn-secondary:hover {
-		background-color: rgba(255, 255, 255, 0.05);
-		border-color: rgba(255, 255, 255, 0.3);
-	}
 	
 	
 	.curvy-overlay {
 		position: fixed;
 		top: 0;
 		left: 0;
-		width: 100vw;
-		height: 100vh;
+		width: 100%;
+		height: 100%;
 		pointer-events: none;
 		z-index: 9999;
-		mix-blend-mode: difference;
+		mix-blend-mode: exclusion;
+	}
+
+	.stroke {
+		stroke: #FFDD00;
+		stroke-width: 40;
 	}
 
 
