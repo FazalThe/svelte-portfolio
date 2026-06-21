@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 
+
 	onMount(() => {
 		const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
@@ -16,37 +17,39 @@
 
 <section class="hero-container">
 
-	<div class="grid-wrapper">
-		<div class="content-box">
-			<h1>
-				Hey there its
-			</h1>
-			<h1>
-				<span class="blue-text">Fazal</span> here.
-			</h1>
-		</div>
+	
+	<div class="content-box">
+		<h1>
+			Hey there its
+		</h1>
+		<h1>
+			<span class="blue-text">Fazal</span> here.
+		</h1>
 	</div>
+	
 </section>
 
-<svg class="curvy-overlay" viewBox="0 0 200 400" preserveAspectRatio="xMidYMid meet">
-	<path class="stroke" d="M 50 -10 C 00 60, 160 120, 90 200 C 30 260, 150 320, 100 400" 
+<svg class="curvy-overlay" viewBox="0 0 200 400" preserveAspectRatio="xMidYMin">
+	<path class="stroke" d="M 50 -10 C 00 60, 160 120, 90 200 C 30 260, 150 320, 100 400 C 30 480, 100 550, 90 630" 
 		fill="none" opacity="1" stroke-linecap="round"/>
 </svg>
 
-<section id="about">
-	<h2>About Me</h2>
-	<p>A brief intro about who you are, what you do, and what you're passionate about.</p>
-</section>
+<div class="me">
+	<section id="about">
+		<h2>About Me</h2>
+		<p>A brief intro about who you are, what you do, and what you're passionate about.</p>
+	</section>
 
-<section id="tools">
-	<h2>Tools I Use</h2>
-	<ul>
-		<li>Tool 1</li>
-		<li>Tool 2</li>
-		<li>Tool 3</li>
-		<li>Tool 4</li>
-	</ul>
-</section>
+	<section id="tools">
+		<h2>Tools I Use</h2>
+		<ul>
+			<li>Tool 1</li>
+			<li>Tool 2</li>
+			<li>Tool 3</li>
+			<li>Tool 4</li>
+		</ul>
+	</section>
+</div>
 
 <section id="projects">
 	<h2>Projects</h2>
@@ -76,7 +79,7 @@
 		background-color: #FFDD00;
 		color: #008B8C;
 		overflow-x: hidden;
-		perspective: 1000px; /* Crucial for the 3D rotation effect */
+		perspective: 1000px; 
 	}
 
 	.hero-container {
@@ -89,17 +92,9 @@
 		position: relative;
 	}
 
-	.grid-wrapper {
-		max-width: 1200px;
-		width: 100%;
-		height: 100%;
-		display: flex;
-		justify-content: center;
-	}
-
 	/* Content Styling */
 	.content-box {
-		max-width: 70%;
+		max-width: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-items: center;
@@ -110,7 +105,7 @@
 	h1 {
 		color: #009985;
 		font-family: "Fascinate", system-ui;
-		font-size: clamp(2rem, 4vw, 5.5rem);
+		font-size: clamp(2rem, 4vw, 7rem);
 		line-height: 1.1;
 		font-weight: 700;
 		margin: 0;
@@ -120,28 +115,12 @@
 	.blue-text {
 		background-color: #f87687;
 		font-family: "Alien Block", sans-serif;
-		font-size: clamp(3.5rem, 7vw, 7rem);
+		font-size: clamp(3.5rem, 8vw, 12rem);
   		font-weight: 400;
   		font-style: normal;
+		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
-	}
-
-	/* Buttons */
-	.cta-group {
-		display: flex;
-		gap: 1rem;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.btn {
-		padding: 0.8rem 2rem;
-		font-size: 1rem;
-		font-weight: 500;
-		border-radius: 30px;
-		text-decoration: none;
-		transition: all 0.3s ease;
 	}
 
 	
@@ -159,7 +138,13 @@
 
 	.stroke {
 		stroke: #FFDD00;
-		stroke-width: 40;
+		stroke-width: 35;
+	}
+
+	.me {
+		display: flex;
+		flex-direction: row;
+		gap: 30%;
 	}
 
 	section {
