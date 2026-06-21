@@ -20,7 +20,7 @@
 	
 	<div class="content-box">
 		<h1>
-			Hey there its
+			Hey there, its
 		</h1>
 		<h1>
 			<span class="blue-text">Fazal</span> here.
@@ -34,10 +34,11 @@
 		fill="none" opacity="1" stroke-linecap="round"/>
 </svg>
 
+
 <div class="me">
 	<section id="about">
 		<h2>About Me</h2>
-		<p>A brief intro about who you are, what you do, and what you're passionate about.</p>
+		<p>An 18yo from Kerala, India. I love learning new stuff, or you could say that I have shiny object syndrome.</p>
 	</section>
 
 	<section id="tools">
@@ -53,18 +54,20 @@
 
 <section id="projects">
 	<h2>Projects</h2>
-	<article>
-		<h3>Project Name</h3>
-		<p>Short description of the project.</p>
-	</article>
-	<article>
-		<h3>Project Name</h3>
-		<p>Short description of the project.</p>
-	</article>
-	<article>
-		<h3>Project Name</h3>
-		<p>Short description of the project.</p>
-	</article>
+	<div>
+		<article>
+			<h3>Project Name</h3>
+			<p>Short description of the project.</p>
+		</article>
+		<article>
+			<h3>Project Name</h3>
+			<p>Short description of the project.</p>
+		</article>
+		<article>
+			<h3>Project Name</h3>
+			<p>Short description of the project.</p>
+		</article>
+	</div>
 </section>
 
 
@@ -123,8 +126,7 @@
 		-webkit-text-fill-color: transparent;
 	}
 
-	
-	
+
 	.curvy-overlay {
 		position: fixed;
 		top: 0;
@@ -144,19 +146,32 @@
 	.me {
 		display: flex;
 		flex-direction: row;
-		gap: 30%;
+		flex-wrap: wrap;
+		gap: 10%;
+		justify-content: center;
 	}
 
-	section {
-		padding: 4rem 2rem;
-		max-width: 1000px;
-		margin: 0 auto;
+	#about {
+		background-color: #009985;
+		border-radius: 15px;
+		padding: 20px;
+		width: 40%;
+
+
+	}
+
+	#about h2{
+		color: #FFDD00;
+	}
+
+	section{
+		margin-bottom: 150px;
 	}
 
 	section h2 {
 		font-family: "Fascinate", system-ui;
 		font-size: clamp(2rem, 5vw, 3.5rem);
-		color: #008b8c;
+		color: #ec7f89;
 		margin: 0 0 2rem;
 	}
 
@@ -164,7 +179,7 @@
 		font-size: 1.2rem;
 		line-height: 1.6;
 		max-width: 600px;
-		color: #006b6c;
+		color: #FFDD00;
 	}
 
 	#tools ul {
@@ -172,6 +187,7 @@
 		padding: 0;
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: center;
 		gap: 1rem;
 	}
 
@@ -190,7 +206,7 @@
 	}
 
 	#projects article {
-		background: #00b8a0;
+		background: #009985;
 		color: #FFDD00;
 		padding: 2rem;
 		border-radius: 1rem;
@@ -206,5 +222,14 @@
 	#projects p {
 		margin: 0;
 		line-height: 1.5;
+	}
+
+	#projects div {
+		margin-top: 30px;
+		display: flex;
+		flex-direction: row;
+		gap: 10%;
+		flex-wrap: wrap;
+		justify-content: center ;
 	}
 </style>
