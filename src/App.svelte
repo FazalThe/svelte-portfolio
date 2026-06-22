@@ -10,7 +10,7 @@
 			.fromTo('.stroke',
 				{ strokeDasharray: 600, strokeDashoffset: 600 },
 				{ strokeDashoffset: 0, duration: 2, ease: 'power2.inOut' },
-			'-=0.5');
+		'-=0.5');
 	});
 </script>
 
@@ -44,10 +44,12 @@
 	<section id="tools">
 		<h2>Tools I Use</h2>
 		<ul>
-			<li>Tool 1</li>
-			<li>Tool 2</li>
-			<li>Tool 3</li>
-			<li>Tool 4</li>
+			<li>KiCAD</li>
+			<li>Fusion 360</li>
+			<li>Godot</li>
+			<li>Figma</li>
+			<li>Svelte</li>
+			<li>DaVinci Resolve</li>
 		</ul>
 	</section>
 </div>
@@ -56,15 +58,16 @@
 	<h2>Projects</h2>
 	<div>
 		<article>
-			<h3>Project Name</h3>
+			<h3>Joy Board</h3>
+			<p>Custom Ergonomic Split Kyeboard, with a thumb joystick on the left side which can mimmick keypresses when moved to each direction.</p>
+		</article>
+		<article>
+			<h3>Grapple Go</h3>
+			
 			<p>Short description of the project.</p>
 		</article>
 		<article>
-			<h3>Project Name</h3>
-			<p>Short description of the project.</p>
-		</article>
-		<article>
-			<h3>Project Name</h3>
+			<h3>Svelte Portfolio</h3>
 			<p>Short description of the project.</p>
 		</article>
 	</div>
@@ -145,16 +148,20 @@
 
 	.me {
 		display: flex;
+		width: 100%;
 		flex-direction: row;
 		flex-wrap: wrap;
-		gap: 10%;
 		justify-content: center;
+		gap: 5%;
+		margin: 0px;
+		padding: 0px;
+		
 	}
 
 	#about {
 		background-color: #009985;
 		border-radius: 15px;
-		padding: 20px;
+		padding: 30px;
 		width: 40%;
 
 
@@ -165,7 +172,9 @@
 	}
 
 	section{
+		margin: 10px;
 		margin-bottom: 150px;
+		min-width: 400px;
 	}
 
 	section h2 {
@@ -191,6 +200,10 @@
 		gap: 1rem;
 	}
 
+	#tools {
+		width: 40%;
+	}
+
 	#tools li {
 		background: #008b8c;
 		color: #FFDD00;
@@ -203,11 +216,13 @@
 	#projects {
 		display: flex;
 		flex-direction: column;
+		width: 100%;
 	}
 
 	#projects article {
 		background: #009985;
 		color: #FFDD00;
+		width: 30%;
 		padding: 2rem;
 		border-radius: 1rem;
 		margin-bottom: 1.5rem;
@@ -228,6 +243,7 @@
 		margin-top: 30px;
 		display: flex;
 		flex-direction: row;
+		width: 100%;
 		gap: 10%;
 		flex-wrap: wrap;
 		justify-content: center ;
