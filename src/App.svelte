@@ -58,17 +58,22 @@
 	<h2>Projects</h2>
 	<div>
 		<article>
+		<a href="https://github.com/FazalThe/Joy-Board">
 			<h3>Joy Board</h3>
+			<img src="/Render.png" width="100%" alt="Joy Board">
 			<p>Custom Ergonomic Split Kyeboard, with a thumb joystick on the left side which can mimmick keypresses when moved to each direction.</p>
+		</a>
 		</article>
 		<article>
-			<h3>Grapple Go</h3>
-			
-			<p>Short description of the project.</p>
+		<a href="https://fazalthe.itch.io/grapple-go">
+			<h3>Grapple Go</h3> 
+			<img src="/Grapple.png" alt="grapple go" width="100%">
+			<p>A grappling platformer.</p>
+		</a>
 		</article>
 		<article>
 			<h3>Svelte Portfolio</h3>
-			<p>Short description of the project.</p>
+			<p>This itself ;)</p>
 		</article>
 	</div>
 </section>
@@ -86,6 +91,10 @@
 		color: #008B8C;
 		overflow-x: hidden;
 		perspective: 1000px; 
+	}
+
+	img {
+		border-radius: 20px;
 	}
 
 	.hero-container {
@@ -248,4 +257,5 @@
 		flex-wrap: wrap;
 		justify-content: center ;
 	}
+
 </style>
