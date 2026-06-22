@@ -1,6 +1,9 @@
 <script>
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+	
+	gsap.registerPlugin(ScrollTrigger);
 
 
 	onMount(() => {
@@ -8,9 +11,24 @@
 
 		tl.from('.content-box h1', { y: 30, opacity: 0, duration: 0.8, stagger: 0.2 })
 			.fromTo('.stroke',
-				{ strokeDasharray: 600, strokeDashoffset: 600 },
-				{ strokeDashoffset: 0, duration: 2, ease: 'power2.inOut' },
-		'-=0.5');
+				{ 
+					strokeDasharray: 600,
+					strokeDashoffset: 600
+				},
+				{
+					strokeDashoffset: 0,
+					duration: 2,
+					ease: 'power2.inOut',
+
+					scrollTrigger: {
+						trigger: '.stroke',
+						start: 'top center',
+						scrub: 'true'
+					}
+
+				},
+				
+			);
 	});
 </script>
 
@@ -31,6 +49,8 @@
 
 <svg class="curvy-overlay" viewBox="0 0 200 400" preserveAspectRatio="xMidYMin">
 	<path class="stroke" d="M 50 -10 C 00 60, 160 120, 90 200 C 30 260, 150 320, 100 400 C 30 480, 100 550, 90 630" 
+		fill="none" opacity="1" stroke-linecap="round"/>
+	<path id="second" class="stroke" d="M 50 -10 C 00 60, 160 120, 90 200 C 30 260, 150 320, 100 400 C 30 480, 100 550, 90 630" 
 		fill="none" opacity="1" stroke-linecap="round"/>
 </svg>
 
@@ -58,14 +78,14 @@
 	<h2>Projects</h2>
 	<div>
 		<article>
-		<a href="https://github.com/FazalThe/Joy-Board">
+		<a href="https://github.com/FazalThe/Joy-Board" target="_blank">
 			<h3>Joy Board</h3>
 			<img src="/Render.png" width="100%" alt="Joy Board">
 			<p>Custom Ergonomic Split Kyeboard, with a thumb joystick on the left side which can mimmick keypresses when moved to each direction.</p>
 		</a>
 		</article>
 		<article>
-		<a href="https://fazalthe.itch.io/grapple-go">
+		<a href="https://fazalthe.itch.io/grapple-go" target="_blank">
 			<h3>Grapple Go</h3> 
 			<img src="/Grapple.png" alt="grapple go" width="100%">
 			<p>A grappling platformer.</p>
@@ -258,4 +278,9 @@
 		justify-content: center ;
 	}
 
+	a {
+		
+		text-decoration: none;
+		color: inherit;
+	}
 </style>
