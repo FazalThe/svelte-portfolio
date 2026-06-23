@@ -10,25 +10,34 @@
 		const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
 		tl.from('.content-box h1', { y: 30, opacity: 0, duration: 0.8, stagger: 0.2 })
-			.fromTo('.stroke',
-				{ 
-					strokeDasharray: 600,
-					strokeDashoffset: 600
-				},
-				{
-					strokeDashoffset: 0,
-					duration: 2,
-					ease: 'power2.inOut',
-
-					scrollTrigger: {
-						trigger: '.stroke',
-						start: 'top center',
-						scrub: 'true'
-					}
-
-				},
-				
-			);
+		.fromTo(
+			'.stroke',
+			{
+				strokeDasharray: 600,
+				strokeDashoffset: 600
+			},
+			{
+				strokeDashoffset: 450,
+				duration: 1,
+				ease: 'power2.inOut',
+				onComplete() {
+					gsap.to('.stroke', {
+						strokeDashoffset: 0,
+						ease: 'none',
+						scrollTrigger: {
+							trigger: '#about',
+							start: 'top center',
+							end: 'bottom top',
+							scrub: 1,
+							snap: {
+								snapTo: [0, 0.33, 0.66, 1],
+								duration: {min: 1}
+							}
+						}
+					});
+				}
+			}
+		);
 	});
 </script>
 
@@ -49,8 +58,6 @@
 
 <svg class="curvy-overlay" viewBox="0 0 200 400" preserveAspectRatio="xMidYMin">
 	<path class="stroke" d="M 50 -10 C 00 60, 160 120, 90 200 C 30 260, 150 320, 100 400 C 30 480, 100 550, 90 630" 
-		fill="none" opacity="1" stroke-linecap="round"/>
-	<path id="second" class="stroke" d="M 50 -10 C 00 60, 160 120, 90 200 C 30 260, 150 320, 100 400 C 30 480, 100 550, 90 630" 
 		fill="none" opacity="1" stroke-linecap="round"/>
 </svg>
 
