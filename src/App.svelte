@@ -31,7 +31,6 @@
 							scrub: 1,
 							snap: {
 								snapTo: [0, 0.33, 0.66, 1],
-								duration: {min: 1}
 							}
 						}
 					});
@@ -110,7 +109,6 @@
 
 
 <style>
-	/* Resets & Variables */
 	:global(body) {
 		margin: 0;
 		font-family: 'Inter', system-ui, -apple-system, sans-serif;
